@@ -1,0 +1,7 @@
+*.pyc
+
+# leading slash means only match at repo-root level
+/.python-version
+/.coverage
+/.venv
+/.pytest_cache
