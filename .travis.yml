@@ -9,5 +9,12 @@ env:
   global:
     - TRAVIS_CI=true
 
+install:
+  - pip install codecov
+
 script:
-  - python -m pytest tests/
+  - coverage run -m pytest tests/
+
+# Push the results back to codecov
+after_success:
+  - codecov
